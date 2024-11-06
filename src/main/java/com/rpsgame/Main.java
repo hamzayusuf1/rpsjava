@@ -12,6 +12,7 @@ public class Main {
     }
 
 
+
     public static String checkInput(String choice) {
         return switch (choice.toLowerCase()) {
             case "rock" -> "You chose Rock!";
@@ -20,6 +21,17 @@ public class Main {
             default -> "Please choose an option from Rock, Paper or Scissors";
         };
     }
+
+    public static Boolean checkMatch (String match_result) {
+        return true;
+    }
+
+
+    /*TDD Test cases
+    * Checking if the user is inputting the correct input
+    * Making sure the input is checked and a boolean is returned
+    *
+    * */
 }
 
 //Sudo code
