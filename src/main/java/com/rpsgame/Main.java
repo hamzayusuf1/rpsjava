@@ -1,5 +1,8 @@
 package com.rpsgame;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 
@@ -9,6 +12,11 @@ public class Main {
         System.out.println("Please chose rock, paper or scissors");
         String playerGuess = scanner.nextLine();
         System.out.println(playerGuess);
+        boolean result = checkMatch(playerGuess);
+
+        if (result) {
+            System.out.println("Player wins the first duel");
+        }
     }
 
 
@@ -22,8 +30,12 @@ public class Main {
         };
     }
 
-    public static Boolean checkMatch (String match_result) {
-        return true;
+    public static Boolean checkMatch (String playerGuess) {
+        String[] potentialChoices = {"rock", "paper", "scissors"};
+        Random random = new Random();
+        int index = random.nextInt(potentialChoices.length);
+        System.out.println(potentialChoices[index]);
+        return playerGuess.toLowerCase().equals(potentialChoices[index]);
     }
 
 
